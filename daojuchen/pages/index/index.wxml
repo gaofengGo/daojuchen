@@ -1,0 +1,35 @@
+<view class="container">
+
+  <view class="page__hd">
+    <!-- <swiper class="bg">
+      <block wx:for="{{slides}}" wx:key="id"> 
+        <swiper-item>
+          <image />
+        </swiper-item>
+      </block>
+    </swiper> -->
+
+    <view class="header">
+      <view class="page__hd_hd page__hd_yuan center"></view>
+      <view class="page__hd_bd center">地下城与勇士</view>
+      <view class="page__hd_ft page__hd_yuan center" ><image src="../../images/saoyisao.png" /></view>
+    </view>
+  </view>
+
+  <view class="page__bd center">
+    <ul class="items">
+      <li class="kit_items__item item-one"><image src="../../images/kit_01.png" /><a href="javascript:;" class="round_btn">全部道具</a></li>
+      <li class="kit_items__item"><image src="../../images/kit_02.png" /><a href="javascript:;" class="round_btn">活动咨讯</a></li>
+      <li class="kit_items__item"><image src="../../images/kit_03.png" /><a href="javascript:;" class="round_btn">限时折扣</a></li>
+      <li class="kit_items__item"><image src="../../images/kit_04.png" /><a href="javascript:;" class="round_btn">聚豆商场</a></li>
+      <li class="kit_items__item item-one"><image src="../../images/kit_05.png" /><a href="javascript:;" class="round_btn">每日签到</a></li>
+      <li class="kit_items__item"><image src="../../images/kit_06.png" /><a href="javascript:;" class="round_btn">我的任务</a></li>
+      <li class="kit_items__item"><image src="../../images/kit_07.png" /><a href="javascript:;" class="round_btn">周边商场</a></li>
+      <li class="kit_items__item"><image src="../../images/kit_08.png" /><a href="javascript:;" class="round_btn">我的订单</a></li>
+    </ul>
+  </view>
+
+  <view class="page__ft">
+    
+  </view>
+</view>
