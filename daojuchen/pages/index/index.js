@@ -4,12 +4,17 @@ const app = getApp()
 
 Page({
   data: {
-    slides:['../../images/bg_01.png','../../images/bg_02.png','../../images/bg_01.png']
+    slides:['../../images/bg_01.png','../../images/bg_02.png','../../images/bg_03.png'],
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  changTab: function(e){
+    wx.navigateTo({
+      url: '../white/white'
     })
   },
   onLoad: function () {

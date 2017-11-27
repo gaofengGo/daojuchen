@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/find/find",
-    "pages/gift/gift"
+    "pages/gift/gift",
+    "pages/white/white"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,30 +13,32 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-      "color": "#8c8c8c",
-      "selectedColor":"#ffffff",
-      "backgroundColor":"#181818",
-      "borderStyle":"black",
-      "list": [
-        {
-          "pagePath":"pages/index/index",
-          "iconPath":"images/store.png",
-          "selectedIconPath": "images/stor.png",
-          "text":"商场"
-        },
-        {
-          "pagePath":"pages/index/index",
-          "iconPath":"images/activity.png",
-          "text":"活动"
-        },{
-          "pagePath":"pages/index/index",
-          "iconPath":"images/gift.png",
-          "text":"礼包"
-        },{
-          "pagePath":"pages/index/index",
-          "iconPath":"images/find.png",
-          "text":"发现"
-        }
-      ]
+    "color": "#8c8c8c",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#181818",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/store.png",
+        "selectedIconPath": "images/stor.png",
+        "text": "商场"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/activity.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/gift.png",
+        "text": "礼包"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/find.png",
+        "text": "发现"
+      }
+    ]
   }
 }
