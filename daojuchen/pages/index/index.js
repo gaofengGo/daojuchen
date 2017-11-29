@@ -5,45 +5,45 @@ const app = getApp()
 Page({
   data: {
     slides:['../../images/bg_01.png','../../images/bg_02.png','../../images/bg_03.png'],
+    current:['0','1','2'],
+    currentTab:0,
+    scend:0
   },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
-  },
+  }, 
+  // swiperTab: function(e) {
+  //   this.setData({
+  //     currentTab:e.data.current,
+  //   });
+  // },
   changTab: function(e){
     wx.navigateTo({
       url: '../white/white'
     })
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
+    this.setIntime();
+  },
+  setIntime: function() {
+    var i = 0 ;
+    var scend = this.data.scend;
+    setInterval(() => {
+      i++;
+      if(i>2 ){
+         i=0;
+         scend +=1 
+       } 
+       if (scend>2) {
+         scend = 0
+       }
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        currentTab:scend,
       })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+     }, 2000)
   },
   getUserInfo: function(e) {
     console.log(e)

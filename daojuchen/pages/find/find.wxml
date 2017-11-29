@@ -1,2 +1,6 @@
 <!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+<view class="page">
+    <view class="hd">一个</view>
+    <view class="bd">量的</view>
+    <view class="ft">个的</view>
+</view>
