@@ -1,1 +1,18 @@
-/* pages/activity/activity.wxss */
+/* pages/activity/activity.wxss *//* pages/common/list.wxss */
+.br {
+    background: rgb(238,238,238);
+    width:100%;
+    height: 20rpx;
+  }
+.swiper-tab {
+  display: flex;
+  width: 80%;
+  height: 88rpx;
+  line-height: 88rpx;
+  flex-direction: row;
+  margin-left: 75rpx;
+}
+.swiper-tab-item {
+  text-align: center;
+  flex: 1;
+}

@@ -1,2 +1,26 @@
-<!--pages/activity/activity.wxml-->
-<text>pages/activity/activity.wxml</text>
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">活动</view>
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="1" bindtap="clickTab">视频</view>
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="2" bindtap="clickTab">直播</view>
+</view>
+
+
+
+
+
+<view class="container">
+        <view class="br"></view>
+        <view class="page">
+                <navigator url="../white/white" class="page_appmsg">
+                    <view class="page__hd ">
+                        <image class="page__thumb" src="../../images/store_01.png" mode="aspectFit"/>
+                    </view>
+            
+                    <view class="page__bd">
+                        <view class="page__bd item-title">DNF安徒恩武器典藏包</view>
+                        <view class="page__bd item-school">安徒恩礼包发售，购买即送+10增强卷</view>
+                        <view class="page__bd item-request"><span>剩余1天</span>（11.20-11.30）</view>
+                    </view>
+                </navigator>
+        </view>
+</view>

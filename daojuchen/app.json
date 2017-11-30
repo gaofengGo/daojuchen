@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/activity/activity",
     "pages/index/index",
     "pages/logs/logs",
     "pages/find/find",
     "pages/gift/gift",
-    "pages/white/white",
-    "pages/activity/activity"
+    "pages/white/white"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

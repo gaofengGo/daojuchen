@@ -1,4 +1,4 @@
-<view class="container"  scroll-y="true">
+<view class="container" >
 
     <view class="header">
         <view class="page__hd_hd page__hd_yuan center"></view>
@@ -8,7 +8,7 @@
     
 
   <view class="page__hd">
-    <swiper class="bg" current="{{currentTab}}" duration="1000">
+    <swiper class="bg" current="{{currentTab}}" duration="1500">
       <block wx:for="{{slides}}" wx:key="id"> 
         <swiper-item>
           <image src="{{item}}" class="bgp"/>
@@ -42,21 +42,27 @@
       </view>
 
       <view class="page__ft_store-content">
-        <view class="page__ft_store-item">
+        <navigator url="../white/white">
+          <view class="page__ft_store-item">
           <image src="../../images/store_01.png" />
           <p class="name">装备属性调整箱</p>
           <p class="price">￥11.60</p>
         </view>
+        </navigator>
+        <navigator url="../white/white">
         <view class="page__ft_store-item">
           <image src="../../images/store_02.png" />
           <p class="name">装扮合成器</p>
           <p class="price">￥20.00</p>
         </view>
+        </navigator>
+        <navigator url="../white/white">
         <view class="page__ft_store-item">
           <image src="../../images/store_03.png" />
           <p class="name">净化圣水</p>
           <p class="price">￥10.00</p>
         </view>
+        </navigator>
       </view>
     </view>
     <view class="page__ft-br"></view>
@@ -70,21 +76,27 @@
           </view>
     
           <view class="page__ft_store-content">
+            <navigator url="../white/white" >
             <view class="page__ft_store-item two">
               <image src="../../images/store-two_01.png" />
               <p class="name">男鬼剑Q版小手办</p>
               <p class="price two">￥98.00</p>
             </view>
+            </navigator>
+            <navigator url="../white/white">
             <view class="page__ft_store-item two">
               <image src="../../images/store-two_02.png" />
               <p class="name">魔剑电弧火机</p>
               <p class="price two">￥138.00</p>
             </view>
+           </navigator>
+           <navigator url="../white/white">
             <view class="page__ft_store-item two">
               <image src="../../images/store-two_03.png" />
               <p class="name">魔盒典藏包</p>
               <p class="price two">￥299.00</p>
             </view>
+            </navigator>
           </view>
         </view>
   </view>

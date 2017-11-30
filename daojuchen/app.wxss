@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import 'styles/weui.wxss';
 .container {
   margin: 0;
   padding: 0;
