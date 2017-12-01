@@ -1,24 +1,11 @@
-// pages/activity/activity.js
+// pages/common/list.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      activeIndex:0,
-  },
-
-  clickTab:function(e){
-    var type = e.target.dataset.current;
-    console.log(type);
-    this.setData({
-      activeIndex: type,
-    })
-  },
-  swiperTab: function(e){
-    this.setData({
-      activeIndex:e.detail.current,
-    })
+  
   },
 
   /**

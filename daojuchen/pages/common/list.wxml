@@ -1,0 +1,19 @@
+<!-- <template name="job_list"> -->
+     <view class="br"></view>
+     <navigator url="../white/white" class="page_appmsg">
+            <view class="page">
+                    <view class="page__hd ">
+                        <image class="page__thumb" src="../../images/store_01.png" mode="aspectFit"/>
+                        <view class="page__hd_title">
+                            <view class="page__hd_title title">DNF安徒恩武器典藏包</view>
+                            <view class="page__hd_title school">安徒恩礼包发售，购买即送增强卷</view>
+                            <view class="page__hd_title request">
+                                <text class="page__hd_title pink">剩余1天</text>
+                                <text class="page__hd_title time">(11.20-11.30)</text>
+                                <view class="page__hd_title cool">^123</view>
+                            </view>
+                        </view>
+                    </view>   
+            </view>
+    </navigator>
+<!-- </template> -->

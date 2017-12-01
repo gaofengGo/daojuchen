@@ -11,6 +11,11 @@
   line-height: 88rpx;
   flex-direction: row;
   margin-left: 75rpx;
+ 
+}
+.active{
+  color: #f65959;
+  border-bottom: 4px solid #f65959;
 }
 .swiper-tab-item {
   text-align: center;

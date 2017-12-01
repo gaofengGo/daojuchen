@@ -125,7 +125,7 @@
 .page__ft_store-item .name {
   width: 100%;
   text-align: center;
-  font-size: 14px;
+  font-size: 28rpx;
 }
 .page__ft_store-item .price{
   width: 100%;
