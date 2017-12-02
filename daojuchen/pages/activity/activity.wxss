@@ -1,9 +1,9 @@
 @import '../common/list.wxss';
-.br {
-    background: rgb(238,238,238);
-    width:100%;
-    height: 20rpx;
-  }
+swiper-item {
+  width: 100%;
+  height: 800rpx;
+}
+
 .swiper-tab {
   display: flex;
   width: 80%;
@@ -13,11 +13,14 @@
   margin-left: 75rpx;
  
 }
-.active{
+.swiper-tab-item.active{
   color: #f65959;
   border-bottom: 4px solid #f65959;
 }
 .swiper-tab-item {
   text-align: center;
   flex: 1;
+}
+swiper {
+  height: 107vh;
 }

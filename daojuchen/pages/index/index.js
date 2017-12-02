@@ -25,6 +25,11 @@ Page({
       url: '../white/white'
     })
   },
+  // changTab2: function(e){
+  //   wx.navigateTo({
+  //     url: '../activity/activity'
+  //   })
+  // },
   onLoad: function () {
     this.setIntime();
   },

@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/common/list",
     "pages/activity/activity",
+    "pages/common/list",
     "pages/index/index",
+
     "pages/logs/logs",
     "pages/find/find",
     "pages/gift/gift",
-  
     "pages/white/white"
   ],
   "window": {

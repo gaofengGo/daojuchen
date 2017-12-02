@@ -1,7 +1,7 @@
 <view class="container" >
 
     <view class="header">
-        <view class="page__hd_hd page__hd_yuan center"></view>
+        <view class="page__hd_hd page__hd_yuan one center"><image src="../../images/touxiang.jpg" /></view>
         <view class="page__hd_bd center" bindtap="changTab">地下城与勇士</view>
         <view class="page__hd_ft page__hd_yuan center" ><image src="../../images/saoyisao.png" /></view>
       </view>

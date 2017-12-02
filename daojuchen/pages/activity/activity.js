@@ -6,13 +6,14 @@ Page({
    */
   data: {
       activeIndex:0,
-      itme: {
-        title:'DNF安徒恩武器典藏包',
-        school:'安徒恩礼包发售，购买即送增强卷',
-        pink:'剩余1天',
-        time:'(11.20-11.30)',
-        cool:'1325'
-      }
+      jobs:[],
+      // itme: {
+      //   title:'DNF安徒恩武器典藏包',
+      //   school:'安徒恩礼包发售，购买即送增强卷',
+      //   pink:'剩余1天',
+      //   time:'(11.20-11.30)',
+      //   cool:'1325'
+      // }
   },
 
   clickTab:function(e){
@@ -32,12 +33,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    wx.request({
+      url:'https://www.easy-mock.com/mock/5a2260b6707056548f08b80e/daojucheng/abc',
+      success:(res)=> {
+        console.log(res);
+        that.setData({
+          jobs:res.data.data.activity
+        });
+        console.log(that.data.jobs);
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  
   onReady: function () {
   
   },

@@ -15,12 +15,10 @@
 .header {
     display: flex;
     height: 85rpx;
-    width: 90%;
+    width: 100%;
     flex-direction: row ;
-    justify-content: space-between;
-    float: left;
-    position: absolute;
-    left: 40rpx;
+    justify-content: space-around;
+    position: fixed;
     top: 60rpx;
     z-index: 9;
 }
@@ -29,7 +27,12 @@
   width: 70rpx;
   height: 70rpx;
   border-radius: 60rpx;
-  background: rgba(111,111,111,.4);
+  background-color: rgba(111,111,111,.4);
+  overflow: hidden;
+}
+.page__hd_hd image{
+  width: 70rpx;
+  height: 70rpx;
 }
 .page__hd_bd{
   width: 400rpx;

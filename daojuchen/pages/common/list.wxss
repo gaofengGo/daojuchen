@@ -50,9 +50,9 @@
     flex-direction: row;
 }
 .page__ft {
-    display: flex;
+    /* display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: center; */
     font-size: 30rpx;
     padding-left: 20rpx;
 }

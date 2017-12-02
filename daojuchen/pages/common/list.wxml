@@ -1,9 +1,9 @@
-<!-- <template name="job_list"> -->
+<template name="job_list">
      <view class="br"></view>
      <navigator url="../white/white" class="page_appmsg">
             <view class="page">
                     <view class="page__hd ">
-                        <image class="page__thumb" src="{{image}}" mode="aspectFit"/>
+                        <image class="page__thumb" src="{{image}}" mode="aspectFill"/>
                         <view class="page__hd_title">
                             <view class="page__hd_title title">{{title}}</view>
                             <view class="page__hd_title school">{{school}}</view>
@@ -15,8 +15,8 @@
                         </view>
                     </view>   
                     <view class='page__ft'>
-                     <i class="iconfont icon-jian-copy active"></i>  +11增幅卷,+12强化卷，天空套
+                     <i class="iconfont icon-jian-copy active"></i>{{page__ft}}}
                     </view>
             </view>
     </navigator>
-<!-- </template> -->
+</template>

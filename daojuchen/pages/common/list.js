@@ -5,12 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-      image:'../../images/store_01.png', 
-      title:'DNF安徒恩武器典藏包',
-      school:'安徒恩礼包发售，购买即送增强卷',
-      pink:'剩余1天',
-      time:'(11.20-11.30)',
-      cool:'1325'
+    image:'../../images/store_01.png', 
+    title:'DNF安徒恩武器典藏包',
+    school:'安徒恩礼包发售，购买即送增强卷',
+    pink:'剩余1天',
+    time:'(11.20-11.30)',
+    cool:'1325',
+    page__ft:'+11增幅卷,+12强化卷，天空套'
   },
 
   /**
