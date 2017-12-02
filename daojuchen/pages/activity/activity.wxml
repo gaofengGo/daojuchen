@@ -3,8 +3,12 @@
     <view class="swiper-tab-item {{activeIndex==1?'active':''}}" data-current="1" bindtap="clickTab">视频</view>
     <view class="swiper-tab-item {{activeIndex==2?'active':''}}" data-current="2" bindtap="clickTab">直播</view>
 </view>
-<swiper current='{{activeIndex}}' bindchange="swiperTab" duration="2000">
-    <swiper-item>活动</swiper-item>
+<swiper current='{{activeIndex}}' bindchange="swiperTab">
+    <swiper-item>
+        <view class="swiper-item__content">
+              sdassd  <template is="job_list" data="{{...item}}"/>
+        </view>
+    </swiper-item>
     <swiper-item>视频</swiper-item>
     <swiper-item>直播</swiper-item>
 </swiper>

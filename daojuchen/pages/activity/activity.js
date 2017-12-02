@@ -6,6 +6,13 @@ Page({
    */
   data: {
       activeIndex:0,
+      itme: {
+        title:'DNF安徒恩武器典藏包',
+        school:'安徒恩礼包发售，购买即送增强卷',
+        pink:'剩余1天',
+        time:'(11.20-11.30)',
+        cool:'1325'
+      }
   },
 
   clickTab:function(e){

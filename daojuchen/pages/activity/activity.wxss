@@ -1,4 +1,4 @@
-/* pages/activity/activity.wxss *//* pages/common/list.wxss */
+@import '../common/list.wxss';
 .br {
     background: rgb(238,238,238);
     width:100%;
