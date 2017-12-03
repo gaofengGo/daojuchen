@@ -1,2 +1,21 @@
-<!--pages/gift/gift.wxml-->
-<text>pages/gift/gift.wxml</text>
+<view class="container">
+    <view class="head">
+        <image mode="aspectFill" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1512297931638&di=8b7768a2a6fcf18f90a69b38d2c6f863&imgtype=0&src=http%3A%2F%2Fres.games.ifeng.com%2Fattachments%2F2011%2F01%2F12%2Frd_rs_ca6de6e921843761407eab1a91d963d5.jpg"/>
+    </view>
+
+<block wx:for="{{jobs}}" wx:key="{{index}}">
+    <view class="weui-cell">
+        <view class="weui-cell-hd">
+            <image src="{{item.image}}" mode="aspectFill" />
+        </view>
+        <view class="weui-cell__bd">
+            <text class="title">{{item.title}}</text>
+            <view><text class="title small">{{item.small}}</text><i class="iconfont icon-douzi active"></i></view>
+        </view>
+        <view class="weui-cell__ft">
+            <button type="primary" bindtap="logbtn"> 兑换</button>
+        </view>
+    </view>
+</block>
+
+</view>
