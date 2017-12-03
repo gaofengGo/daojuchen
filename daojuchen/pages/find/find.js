@@ -5,14 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    jobs:[{}]
   },
-
+  arrow: function(e){
+    wx.navigateTo({
+      url: '../white/white'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+    wx.request({
+      url:"https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc",
+      success:(res)=>{
+        console.log(res)
+        that.setData({
+          jobs:res.data.data.jobs
+        })
+      }
+    })
   },
 
   /**

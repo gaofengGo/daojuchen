@@ -1,1 +1,39 @@
-/* pages/find/find.wxss */
+@import 'static/css/common.wxss';
+.weui-cell__hd image {
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 90rpx ;
+}
+.weui-cell__bd {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+.title {
+    font-size: 30rpx;
+    color: #000000;
+}
+.small {
+    font-size: 24rpx;
+    color: #9d9d9d;
+}
+.weui-cell__ft {
+    font-size: 24rpx;
+}
+.page__bd {
+    margin-left: 40rpx;
+    font-size: 30rpx;
+}
+.page__ft {
+    display: flex;
+    color: #9d9d9d;
+    justify-content: flex-end;
+   
+    margin-right: 35rpx;
+}
+.page__ft #dianzan1 {
+    padding-right: 50rpx;
+}
+.br {
+    border-bottom: 4rpx solid #ececec;
+}
