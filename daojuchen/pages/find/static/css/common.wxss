@@ -22,7 +22,11 @@
 .icon-arrow:before { content: "\e600"; }
 
 .icon-dianzan1-copy:before { content: "\e6c4"; }
-.iconfont.icon-dianzan1.active ,.iconfont.icon-dianzan1-copy.active ,.iconfont.icon-liuyan.active{
+.iconfont.icon-dianzan1.active ,.iconfont.icon-liuyan.active{
   font-size: 40rpx;
   /* color: yellow; */
+}
+.iconfont.icon-dianzan1-copy.active {
+  font-size: 40rpx;
+  color: yellow;
 }

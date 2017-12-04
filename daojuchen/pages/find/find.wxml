@@ -1,21 +1,24 @@
-<block wx:for="{{jobs}}" wx:key="index">
-<view class="page">
-    <view class="weui-cell">
-        <view class="weui-cell__hd"><image src="{{item.image1}}" /></view>
-        <view class="weui-cell__bd">
-            <text class="title">{{item.name}}</text>
-            <text class="small">{{item.small}}</text>
+<scroll-view scroll-y="true" bindscrolltolower="lower" bindscrolltoupper="upper" style="height:{{windowHeight}}px">
+    <block wx:for="{{jobs}}" wx:key="index">
+        <view class="page">
+            <view class="weui-cell">
+                <view class="weui-cell__hd"><image src="{{item.image1}}" /></view>
+                <view class="weui-cell__bd">
+                    <text class="title">{{item.name}}</text>
+                    <text class="small">{{item.small}}</text>
+                </view>
+                <view class="weui-cell__ft">{{item.oldtime}}<a id="arrow" bindtap="arrow"><i class="iconfont icon-arrow active"></i></a></view>
+            </view>
+            <view class="page__bd">
+                <text wx:if="{{item.comment}}" class="comment">{{item.comment}}</text>
+                <image wx:if="{{item.image2}}" src="{{item.image2}}" mode="aspectFill"/>
+            </view>
+            <view class="page__ft">
+                <a wx:if="{{!item.isSelected}}" id="dianzan1" data-id = "{{item.id}}" bindtap="cool"><i class="iconfont icon-dianzan1 active"></i></a>
+                <a wx:if="{{item.isSelected}}" id="dianzan1" data-id = "{{item.id}}" bindtap="cool"><i class="iconfont icon-dianzan1-copy active"></i></a>
+                <a id="liuyan" bindtap="arrow"><i class="iconfont icon-liuyan active"></i></a>
+            </view>
+            <view class="br"></view>
         </view>
-        <view class="weui-cell__ft">{{item.oldtime}}<a id="arrow" bindtap="arrow"><i class="iconfont icon-arrow active"></i></a></view>
-    </view>
-    <view class="page__bd">
-        <text wx:if="{{item.comment}}" class="comment">{{item.comment}}</text>
-        <image wx:if="{{item.image2}}" src="{{item.image2}}" mode="aspectFill"/>
-    </view>
-    <view class="page__ft">
-        <a id="dianzan1" bindtap="arrow"><i class="iconfont icon-dianzan1 active"></i></a>
-        <a id="liuyan" bindtap="arrow"><i class="iconfont icon-liuyan active"></i></a>
-    </view>
-    <view class="br"></view>
-</view>
-</block>
+    </block>
+</scroll-view>

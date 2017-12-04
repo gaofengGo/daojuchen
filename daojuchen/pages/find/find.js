@@ -5,11 +5,73 @@ Page({
    * 页面的初始数据
    */
   data: {
-    jobs:[{}]
+    jobs:[],
+    windowHeigt:0,
   },
   arrow: function(e){
     wx.navigateTo({
       url: '../white/white'
+    })
+  },
+  cool:function(e) {
+    console.log(e);
+    let jobs = this.data.jobs
+    for(let key in jobs){
+      console.log(jobs[key].id);
+      if (jobs[key].id === e.currentTarget.dataset.id){
+        if (!jobs[key].isSelected){
+          jobs[key].isSelected = true;
+          wx.showToast({
+            title: '点赞成功',
+            icon: 'success',
+            duration: 1500,
+          })
+        }else{
+          jobs[key].isSelected = false;
+          wx.showToast({
+            title: '取消点赞',
+            icon: 'success',
+            duration: 1500,
+          })
+        }       
+      }
+    }
+    this.setData({
+      jobs : jobs,
+    });
+ 
+  },
+  // upper:function(){
+  //   console.log('下拉加载')
+  //   // var that = this;
+  //   wx.request({
+  //     url:'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',
+  //     complete:(res)=>{
+  //       var jobs = this.data.jobs.concat(res.data.data.jobs)
+  //       console.log(res)
+  //       this.setData({
+  //         jobs:jobs,
+  //       })
+  //     }
+  //   })
+  // },
+  lower:function(){
+    console.log('下拉加载');
+    // var that = this;
+    wx.showToast({
+      title:'加载中',
+      icon:'loading',
+      duration: 1000,
+    });
+     wx.request({
+      url:'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',
+      complete:(res)=>{
+        var jobs = this.data.jobs.concat(res.data.data.jobs)
+        // console.log(res)
+       this.setData({
+          jobs:jobs,
+        })
+      }
     })
   },
   /**
@@ -17,6 +79,16 @@ Page({
    */
   onLoad: function (options) {
     var that = this
+    wx.getSystemInfo({
+      success:(res)=> {
+        that.setData({
+          windowHeight:res.windowHeight
+        });
+        // console.log(res.windowHeight);
+      }
+    });
+    // console.log(this.data.windowHeight);
+   
     wx.request({
       url:"https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc",
       success:(res)=>{
@@ -60,14 +132,12 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
   },
-
+ 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
   },
 
   /**
