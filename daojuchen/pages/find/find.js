@@ -7,6 +7,8 @@ Page({
   data: {
     jobs:[],
     windowHeigt:0,
+    pullUpAllow:true,
+    pullLowAllow:false
   },
   arrow: function(e){
     wx.navigateTo({
@@ -41,6 +43,43 @@ Page({
     });
  
   },
+  upper: function() {
+    var that = this
+    // var timestamp = Date.parse(new Date()) / 1000;
+    // var lastTime = this.data.lastLoadTime
+    // if (timestamp - lastTime < 0) {
+    //     console.log('太快了')
+    // } else {
+    //     that.setData({ lastLoadTime: timestamp })
+        if (this.data.pullUpAllow) {
+            console.log('刷新啦')
+            that.setData({
+                pullUpAllow: false
+            })
+            wx.showNavigationBarLoading() //在标题栏中显示加载
+            // console.log(that.data.classidnow)
+            wx.request({
+                url: 'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',//这里放置的是接口的地址
+                success: function(res) {
+                  var jobs = that.data.jobs.concat(res.data.data.jobs)
+                  // console.log(res)
+                 that.setData({
+                    jobs:jobs,
+                  })
+                },
+                complete: function() {
+                    wx.hideNavigationBarLoading() //完成停止加载
+                    wx.stopPullDownRefresh() //停止下拉刷新
+                    setInterval(() => {
+                        that.setData({
+                            pullUpAllow: true
+                        })
+                    }, 1000)
+                }
+            })
+        }
+},
+
   // upper:function(){
   //   console.log('下拉加载')
   //   // var that = this;
@@ -56,8 +95,8 @@ Page({
   //   })
   // },
   lower:function(){
+    var that = this;
     console.log('下拉加载');
-    // var that = this;
     wx.showToast({
       title:'加载中',
       icon:'loading',
@@ -65,13 +104,24 @@ Page({
     });
      wx.request({
       url:'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',
+      success: function() {
+        //   wx.hideNavigationBarLoading() //完成停止加载
+        //   wx.stopPullDownRefresh() //停止下拉刷新
+          setInterval(() => {
+              that.setData({
+                  pullLowAllow: true
+              })
+          }, 1000);
+      },
       complete:(res)=>{
-        var jobs = this.data.jobs.concat(res.data.data.jobs)
+        var jobs = that.data.jobs.concat(res.data.data.jobs)
         // console.log(res)
-       this.setData({
+        if (that.data.pullLowAllow){
+       that.setData({
           jobs:jobs,
-        })
-      }
+          pullLowAllow:false
+        })}
+      },
     })
   },
   /**
