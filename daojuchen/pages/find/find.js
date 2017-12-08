@@ -10,6 +10,28 @@ Page({
     pullUpAllow:true,
     pullLowAllow:false
   },
+  tost:function() {
+    wx.showActionSheet({
+      itemList: ['举报', '屏蔽'],
+      success: function(res) {
+        console.log(res.tapIndex)
+        if(res.tapIndex==0){
+        wx.showToast({
+          title:'举报成功',
+          icon:'success',
+          duration:1000
+        })} else {
+          wx.showToast({
+            title:'屏蔽成功',
+            icon:'success',
+            duration:1000
+        })}
+      },
+      fail: function(res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
   arrow: function(e){
     wx.navigateTo({
       url: '../white/white'
@@ -80,20 +102,6 @@ Page({
         }
 },
 
-  // upper:function(){
-  //   console.log('下拉加载')
-  //   // var that = this;
-  //   wx.request({
-  //     url:'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',
-  //     complete:(res)=>{
-  //       var jobs = this.data.jobs.concat(res.data.data.jobs)
-  //       console.log(res)
-  //       this.setData({
-  //         jobs:jobs,
-  //       })
-  //     }
-  //   })
-  // },
   lower:function(){
     var that = this;
     console.log('下拉加载');
@@ -102,27 +110,34 @@ Page({
       icon:'loading',
       duration: 1000,
     });
-     wx.request({
-      url:'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',
-      success: function() {
-        //   wx.hideNavigationBarLoading() //完成停止加载
-        //   wx.stopPullDownRefresh() //停止下拉刷新
-          setInterval(() => {
-              that.setData({
-                  pullLowAllow: true
-              })
-          }, 1000);
-      },
-      complete:(res)=>{
-        var jobs = that.data.jobs.concat(res.data.data.jobs)
-        // console.log(res)
-        if (that.data.pullLowAllow){
-       that.setData({
-          jobs:jobs,
-          pullLowAllow:false
-        })}
-      },
-    })
+    setTimeout(function(){
+      wx.showToast({
+        title:'加载成功',
+        icon:'success',
+        duration:1000,
+      });
+
+      wx.request({
+        url:'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',
+        // success: function() {
+        //     setInterval(() => {
+        //         that.setData({
+        //             pullLowAllow: true
+        //         })
+        //     }, 1000);
+        // },
+        complete:(res)=>{
+          var jobs = that.data.jobs.concat(res.data.data.jobs)
+          // console.log(res)
+          // if (that.data.pullLowAllow){
+         that.setData({
+            jobs:jobs,
+            // pullLowAllow:false
+          })
+        },
+      })
+    },1000);
+   
   },
   /**
    * 生命周期函数--监听页面加载

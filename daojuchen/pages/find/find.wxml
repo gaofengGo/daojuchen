@@ -7,7 +7,7 @@
                     <text class="title">{{item.name}}</text>
                     <text class="small">{{item.small}}</text>
                 </view>
-                <view class="weui-cell__ft">{{item.oldtime}}<a id="arrow" bindtap="arrow"><i class="iconfont icon-arrow active"></i></a></view>
+                <view class="weui-cell__ft">{{item.oldtime}}<a id="arrow" bindtap="tost"><i class="iconfont icon-arrow active"></i></a></view>
             </view>
             <view class="page__bd">
                 <text wx:if="{{item.comment}}" class="comment">{{item.comment}}</text>
