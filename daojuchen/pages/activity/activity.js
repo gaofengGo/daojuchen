@@ -28,6 +28,10 @@ Page({
       activeIndex:e.detail.current,
     })
   },
+  // lower:function(){
+  //   console.log('下拉刷新');
+   
+  // },
 
   /**
    * 生命周期函数--监听页面加载
@@ -41,7 +45,7 @@ Page({
         that.setData({
           jobs:res.data.data.activity
         });
-        console.log(that.data.jobs);
+        // console.log(that.data.jobs);
       }
     })
   },

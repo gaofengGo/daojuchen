@@ -25,6 +25,11 @@ Page({
       url: '../white/white'
     })
   },
+  changTab2: function(e){
+    wx.switchTab({
+      url: '../activity/activity'
+    })
+  },
   // changTab2: function(e){
   //   wx.navigateTo({
   //     url: '../activity/activity'

@@ -1,4 +1,5 @@
 // pages/find/find.js
+// var i = 1;
 Page({
 
   /**
@@ -8,7 +9,7 @@ Page({
     jobs:[],
     windowHeigt:0,
     pullUpAllow:true,
-    pullLowAllow:false
+    pullLowAllow:true
   },
   tost:function() {
     wx.showActionSheet({
@@ -96,7 +97,7 @@ Page({
                         that.setData({
                             pullUpAllow: true
                         })
-                    }, 1000)
+                    }, 3000)
                 }
             })
         }
@@ -104,40 +105,35 @@ Page({
 
   lower:function(){
     var that = this;
-    console.log('下拉加载');
-    wx.showToast({
-      title:'加载中',
-      icon:'loading',
-      duration: 1000,
-    });
-    setTimeout(function(){
-      wx.showToast({
-        title:'加载成功',
-        icon:'success',
-        duration:1000,
-      });
-
-      wx.request({
-        url:'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',
-        // success: function() {
-        //     setInterval(() => {
-        //         that.setData({
-        //             pullLowAllow: true
-        //         })
-        //     }, 1000);
-        // },
-        complete:(res)=>{
-          var jobs = that.data.jobs.concat(res.data.data.jobs)
-          // console.log(res)
-          // if (that.data.pullLowAllow){
-         that.setData({
-            jobs:jobs,
-            // pullLowAllow:false
-          })
-        },
+    if(that.data.pullLowAllow) {
+      that.setData({
+        pullLowAllow:false
       })
-    },1000);
-   
+       console.log('下拉加载');
+      wx.showToast({
+        title:'加载中',
+        icon:'loading',
+        duration: 1000,
+      });
+      setTimeout(function(){
+        wx.showToast({
+          title:'加载成功',
+          icon:'success',
+          duration:1000,
+        });
+        wx.request({
+          url:'https://www.easy-mock.com/mock/5a24075682614c0dc1bf0997/abc/abc',
+          complete:(res)=>{
+            console.log(that.data.jobs);
+            var jobs = that.data.jobs.concat(res.data.data.jobs)
+          that.setData({
+              jobs:jobs,
+              pullLowAllow:true
+            })
+          },
+        })
+      },1000);
+    }
   },
   /**
    * 生命周期函数--监听页面加载

@@ -6,12 +6,13 @@ swiper-item {
 
 .swiper-tab {
   display: flex;
+   /* position: fixed;  */
   width: 80%;
   height: 88rpx;
   line-height: 88rpx;
   flex-direction: row;
   margin-left: 75rpx;
- 
+  background: white;
 }
 .swiper-tab-item.active{
   color: #f65959;
@@ -22,5 +23,6 @@ swiper-item {
   flex: 1;
 }
 swiper {
-  height: 107vh;
+  height: 163vh;
+  overflow-y:scroll
 }

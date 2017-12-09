@@ -20,7 +20,7 @@
   <view class="page__bd center">
     <ul class="items">
       <li class="kit_items__item item-one" bindtap="changTab"><image src="../../images/kit_01.png" /><a href="javascript:;" class="round_btn">全部道具</a></li>
-      <li class="kit_items__item" bindtap="changTab"><image src="../../images/kit_02.png" /><a href="javascript:;" class="round_btn">活动咨讯</a></li>
+      <li class="kit_items__item" bindtap="changTab2"><image src="../../images/kit_02.png" /><a href="javascript:;" class="round_btn">活动咨讯</a></li>
       <li class="kit_items__item" bindtap="changTab"><image src="../../images/kit_03.png" /><a href="javascript:;" class="round_btn">限时折扣</a></li>
       <li class="kit_items__item" bindtap="changTab"><image src="../../images/kit_04.png" /><a href="javascript:;" class="round_btn">聚豆商场</a></li>
       <li class="kit_items__item item-one" bindtap="changTab"><image src="../../images/kit_05.png" /><a href="javascript:;" class="round_btn">每日签到</a></li>

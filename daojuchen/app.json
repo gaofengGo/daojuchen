@@ -1,17 +1,15 @@
 {
   "pages": [
-    "pages/activity/activity",
-    "pages/common/list",
     "pages/index/index",
-
-    "pages/logs/logs",
     "pages/find/find",
     "pages/gift/gift",
+    "pages/activity/activity",
+    "pages/common/list",
     "pages/white/white"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#eb4c4c",
     "navigationBarTitleText": "道聚城",
     "navigationBarTextStyle": "black"
   },
